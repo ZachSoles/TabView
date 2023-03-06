@@ -46,6 +46,15 @@ public struct TabView: View {
     @State var activeTabColor: Color? = Color.accentColor
     @State var inactiveTabColor: Color? = Color.white
 //    @State private var draggedTab: String?
+    
+    public init(tabs: [String], selectedTabIndex: Binding<Int>, activeColor: Color? = Color.accentColor, inactiveColor: Color? = Color.accentColor, activeTabColor: Color? = Color.accentColor, inactiveTabColor: Color? = Color.accentColor) {
+        self.tabs = tabs
+        self._selectedTabIndex = selectedTabIndex
+        self.activeColor = activeColor
+        self.inactiveColor = inactiveColor
+        self.activeTabColor = activeTabColor
+        self.inactiveTabColor = inactiveTabColor
+    }
 
     public var body: some View {
         HStack{
