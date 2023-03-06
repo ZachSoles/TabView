@@ -38,7 +38,7 @@ struct tab: View {
     }
 }
 
-struct TabView: View {
+public struct TabView: View {
     @State var tabs: [String]
     @Binding var selectedTabIndex: Int
     @State var activeColor: Color? = Color.accentColor
@@ -46,8 +46,8 @@ struct TabView: View {
     @State var activeTabColor: Color? = Color.accentColor
     @State var inactiveTabColor: Color? = Color.white
 //    @State private var draggedTab: String?
-    
-    var body: some View {
+
+    public var body: some View {
         HStack{
             ForEach(tabs, id: \.self) { tabName in
                 let index = tabs.firstIndex(of: tabName)
@@ -103,7 +103,7 @@ struct TabView: View {
 struct TabsView_Previews: PreviewProvider {
     @State static var indexExample = 0
     @State static var tabsExample = ["tab1", "tab2"]
-    
+
     static var previews: some View {
         VStack {
             TabView(
