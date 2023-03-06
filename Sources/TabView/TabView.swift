@@ -39,7 +39,7 @@ struct tab: View {
 }
 
 public struct TabView: View {
-    @State var tabs: [String]
+    @Binding var tabs: [String]
     @Binding var selectedTabIndex: Int
     @State var activeColor: Color? = Color.accentColor
     @State var inactiveColor: Color? = Color.gray
@@ -47,8 +47,8 @@ public struct TabView: View {
     @State var inactiveTabColor: Color? = Color.white
 //    @State private var draggedTab: String?
     
-    public init(tabs: [String], selectedTabIndex: Binding<Int>, activeColor: Color? = Color.accentColor, inactiveColor: Color? = Color.accentColor, activeTabColor: Color? = Color.accentColor, inactiveTabColor: Color? = Color.accentColor) {
-        self.tabs = tabs
+    public init(tabs: Binding<[String]>, selectedTabIndex: Binding<Int>, activeColor: Color? = Color.accentColor, inactiveColor: Color? = Color.accentColor, activeTabColor: Color? = Color.accentColor, inactiveTabColor: Color? = Color.accentColor) {
+        self._tabs = tabs
         self._selectedTabIndex = selectedTabIndex
         self.activeColor = activeColor
         self.inactiveColor = inactiveColor
@@ -116,7 +116,7 @@ struct TabsView_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
             TabView(
-                tabs: tabsExample,
+                tabs: $tabsExample,
                 selectedTabIndex: $indexExample
             )
             Spacer()
@@ -126,6 +126,9 @@ struct TabsView_Previews: PreviewProvider {
                 } else {
                     Text("View 2")
                 }
+            }
+            Button { tabsExample.append("fuck") } label: {
+                Text("+")
             }
             Spacer()
         }
