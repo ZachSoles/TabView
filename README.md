@@ -32,6 +32,6 @@ value is passed through to the view.
 
 ToDo:
 1) Implement reorganizing and dragging of tabs
-
+2) Add animations for selecting a tab
 if any feedback please reach out to my email zacsoles@gmail.com
 
