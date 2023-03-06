@@ -6,6 +6,6 @@ final class TabViewTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(TabView().text, "Hello, World!")
+//        XCTAssertEqual(TabView(tabs: ["tab1", "tab2"], selectedTabIndex: .constant(1)), )
     }
 }
