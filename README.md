@@ -24,7 +24,7 @@ different views dependent on the selected tab.
 
 **Optional Vars**
 
-- activeColor, inactiveColor change the the color of the selected tab's text. This is currently set to the device's accent color if no
+- activeColor, inactiveColor change the the color of the selected/ not selected tab's text. This is currently set to the device's accent color if no
 value is passed through to the view.
 
 - activeTabColor, inactiveTabColor change the color of the underline of the tab. This is currently set to the device's accent color as well if no
@@ -33,5 +33,6 @@ value is passed through to the view.
 ToDo:
 1) Implement reorganizing and dragging of tabs
 2) Add animations for selecting a tab
-if any feedback please reach out to my email zacsoles@gmail.com
+
+If any feedback please reach out to my email zacsoles@gmail.com
 
